@@ -587,7 +587,7 @@ const getUserInfo = async () => {
     if (profileRes.data.countryId) form.country = profileRes.data.countryId
     if (profileRes.data.stateId) form.state = profileRes.data.stateId
     if (profileRes.data.cityId) form.city = profileRes.data.cityId
-    if (profileRes.data.section) form.level = String(profileRes.data.section)
+    if (profileRes.data.board) form.level = String(profileRes.data.board)
     if (profileRes.data.grade) form.grade = String(profileRes.data.grade)
     if (profileRes.data.avatar) avatarUrl.value = profileRes.data.avatar
     if (profileRes.data.countryId) {
@@ -622,7 +622,7 @@ const submitProfile = async () => {
       profilePayload.append('FirstName', form.first_name)
       profilePayload.append('LastName', form.last_name)
       profilePayload.append('Gender', form.gender == 1 ? 'Male' : 'Female')
-      profilePayload.append('Section', form.level)
+      profilePayload.append('Board', form.level)
       profilePayload.append('Grade', form.grade)
       profilePayload.append('Avatar', form.avatar)
 
